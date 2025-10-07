@@ -15,18 +15,25 @@
             background-attachment: fixed;
         }
         .menu-card {
+            /* Tailwind classes untuk kartu menu */
             @apply bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.02] cursor-pointer border border-gray-100;
         }
+        /* MENGUBAH UKURAN GRID DARI minmax(200px, 1fr) MENJADI 3 KOLOM TETAP */
         .menu-grid {
+            /* Membuat 3 kolom di layar yang lebih besar (sm:grid-cols-3) */
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        /* Responsif: Pastikan di layar lebar selalu 3 kolom */
+        @media (min-width: 640px) {
+            .menu-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 </head>
 <body class="modern-bg min-h-screen flex flex-col items-center justify-center p-4">
 
-    <!-- Kontainer Header Utama (Tanpa Logo) -->
     <header class="text-center mb-10 p-6 bg-white/80 rounded-2xl shadow-2xl">
-        <!-- Logo Dihilangkan Sesuai Permintaan -->
         <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mt-2">
             SISTEM INFORMASI UNIT SIMPAN PINJAM
         </h1>
@@ -35,32 +42,39 @@
         </h2>
     </header>
 
-    <!-- Grid Menu Utama -->
     <main class="w-full max-w-4xl">
         <div class="grid menu-grid gap-6">
             
-            <!-- Menu 1: Peraturan -->
             <a href="peraturan.html" class="menu-card text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-600 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                 <h3 class="text-lg font-bold text-gray-700">Peraturan</h3>
                 <p class="text-sm text-gray-500">Syarat & Ketentuan Peminjaman</p>
             </a>
 
-            <!-- Menu 2: Data Peminjam (Sisa Utang) -->
+            <a href="unduh.html" class="menu-card text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <h3 class="text-lg font-bold text-gray-700">Form Peminjaman</h3>
+                <p class="text-sm text-gray-500">Unduh Blanko Pengajuan</p>
+            </a>
+
             <a href="sisa-utang.html" class="menu-card text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"></path></svg>
                 <h3 class="text-lg font-bold text-gray-700">Data Peminjam</h3>
                 <p class="text-sm text-gray-500">Cek Sisa Utang & Angsuran</p>
             </a>
 
-            <!-- Menu 3: Form Peminjaman (Unduh Blanko) -->
-            <a href="unduh.html" class="menu-card text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <h3 class="text-lg font-bold text-gray-700">Form Peminjaman</h3>
-                <p class="text-sm text-gray-500">Unduh Blanko Pengajuan</p>
+            <a href="neraca-kas.html" class="menu-card text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                <h3 class="text-lg font-bold text-gray-700">Neraca & Kas</h3>
+                <p class="text-sm text-gray-500">Laporan Keuangan Bulanan</p>
+            </a>
+
+            <a href="shu.html" class="menu-card text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-orange-600 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+                <h3 class="text-lg font-bold text-gray-700">S.H.U</h3>
+                <p class="text-sm text-gray-500">Sisa Hasil Usaha</p>
             </a>
             
-            <!-- Menu 4: Saran -->
             <a href="saran.html" class="menu-card text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-600 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 15.17 15.17 0 01-2.6 3.8 2.5 2.5 0 01-2.9 0 15.17 15.17 0 01-2.6-3.8A8.38 8.38 0 013 11.5a9 9 0 1018 0z"></path><path d="M12 17V12"></path><path d="M12 9h.01"></path></svg>
                 <h3 class="text-lg font-bold text-gray-700">Saran</h3>
