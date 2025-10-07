@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aturan Peminjaman Primkopau</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .modern-bg {
+            background: linear-gradient(135deg, #eff6ff 0%, #bfdbfe 100%);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="modern-bg min-h-screen p-4 flex justify-center items-start">
+    <div class="w-full max-w-4xl bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 md:p-8 mt-10">
+
+        <!-- Header Halaman -->
+        <div class="text-center mb-6 border-b pb-4">
+            <h1 class="text-3xl font-extrabold text-gray-800">ATURAN PEMINJAMAN</h1>
+            <h2 class="text-lg text-blue-600">UNIT SIMPAN PINJAM PRIMKOPAU MAKO KOHARMATAU</h2>
+        </div>
+        
+        <!-- Area Konten Utama (PDF Viewer) -->
+        <div class="mt-8">
+            <div class="bg-gray-100 p-4 rounded-xl shadow-inner mb-4">
+                <p class="text-sm text-gray-600 font-semibold text-center">
+                    Dokumen Peraturan (Hanya Tampilan, Tidak Dapat Diunduh)
+                </p>
+            </div>
+
+            <!-- Iframe untuk menampilkan PDF -->
+            <div class="h-[75vh] w-full border-4 border-gray-300 rounded-lg overflow-hidden shadow-lg">
+                <!-- 
+                    CATATAN: 
+                    Nama file diubah menjadi 'peraturansipa.pdf' sesuai permintaan. 
+                    Jika file tidak dimuat, pastikan 'peraturansipa.pdf' sudah diunggah di samping file ini.
+                -->
+                <iframe 
+                    src="peraturansipa.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+                    class="w-full h-full" 
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+
+        <!-- Tombol Kembali -->
+        <div class="text-center mt-8">
+            <a href="index.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition duration-150">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Kembali ke Menu Utama
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>
